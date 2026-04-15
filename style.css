@@ -17,6 +17,7 @@ span{
     
     display: flex;
     flex-direction: column-reverse;
+    margin: 100px 0;
 }
 #input{
     padding: 20px ;
@@ -60,4 +61,17 @@ a{
         color: rgb(255, 0, 0);
     }
 
+}
+input{
+    border-radius: 20px;
+    border: 1px solid black;
+    outline: none;
+    &:hover{
+        transform: scale(0.9);
+    }
+  
+}
+#input:active{
+   background: wheat;
+   color: white;
 }
