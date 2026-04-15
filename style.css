@@ -1,13 +1,16 @@
 *{
-    margin: 0 ;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
 }
-
-.search-box{
+#search-box{
     width: 100%;
     max-width: 1200px;
+    background: black;
     margin: 0 auto;
+}
+#search-box img{
+    width: 100%;
 }
