@@ -1,38 +1,37 @@
 const wrapper = document.getElementById("container");
-const search = document.getElementById("input")
+const search = document.getElementById("input");
+
 fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
-.then(response => response.json())
-.then(data =>{
-    
-    
-   
-    
-    render(data)
-})
-.catch(error=> console.error("xatolik yuz berdi",error));
-function render(users){
-    const cards = users.map(el =>`
-        <div id"card" key = "${el.id}">
-    <img src="${el.avatar}" alt="">
-    <p>${el.name}</p>
-    <a href="#">${el.createdAt}</a>
-</div>
-        `).join()
+  .then(response => response.json())
+  .then(data => {
+    render(data); // Dastlab barcha ma'lumotni chiqaradi
+    filterInput(data); // Qidiruv funksiyasini ishga tushiradi
+  })
+  .catch(error => console.error("Xatolik yuz berdi:", error));
 
-        wrapper.innerHTML = cards
+function render(users) {
+  const cards = users.map(el => `
+    <div class="card" key="${el.id}">
+        <img src="${el.avatar}" alt="${el.name}" style="width:100px">
+        <p>${el.name}</p>
+        <a href="#">${new Date(el.createdAt).toLocaleDateString()}</a>
+    </div>
+  `).join(''); // Join ichiga bo'sh satr qo'shish shart
+
+  wrapper.innerHTML = cards;
 }
-render(users)
 
+function filterInput(data) {
+  // "input" hodisasi har bir harf yozilganda ishlaydi
+  search.addEventListener("input", (e) => {
+    let inputValue = e.target.value.toLowerCase();
 
-function filterInput(data){
-    search.addEventListener("search",(e) =>{
-        let input = e.target.value.toLowerCase();
-        let filterIndia = data.filter(input =>
-            search.name.tolowercase().includes(input);
-            search.createdAt.tolowercase().includes(input);
-
-        )
-        render(filterIndia)
+    let filteredData = data.filter(item => {
+      // Ismi yoki sanasi mos kelishini tekshiramiz
+      return item.name.toLowerCase().includes(inputValue) || 
+             item.createdAt.toLowerCase().includes(inputValue);
     });
 
+    render(filteredData); // Faqat qidiruvga moslarini qayta chizadi
+  });
 }
