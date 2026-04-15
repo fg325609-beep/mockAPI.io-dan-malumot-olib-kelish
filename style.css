@@ -27,12 +27,37 @@ span{
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 80px;
 }
 #cards-wrapper img{
     width: 200px;
     height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
 }
-#wrapper{
-    padding: 20px;
+.card{
+    padding: 20px; 
+    text-align: center;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 20px;
+    &:active{
+        background: red;
+    }
+    &:hover{
+        background: rgb(82, 82, 88);
+        transform: scale(1.2);
+    }
+}
+p{
+    font-size: 25px;
+    &:hover{
+        color: rgb(0, 195, 255);
+    }
+}
+a{
+    font-size: 25px;
+    &:hover{
+        color: rgb(255, 0, 0);
+    }
+
 }
