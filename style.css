@@ -41,9 +41,7 @@ span{
     text-align: center;
     box-shadow: 1px 1px 10px black;
     border-radius: 20px;
-    &:active{
-        background: red;
-    }
+   
     &:hover{
         background: rgb(82, 82, 88);
         transform: scale(1.2);
