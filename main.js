@@ -1,5 +1,5 @@
 const wrapper = document.getElementById("container");
-
+const search = document.getElementById("input")
 fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
 .then(response => response.json())
 .then(data =>{
@@ -22,3 +22,9 @@ function render(users){
         wrapper.innerHTML = cards
 }
 render(users)
+
+
+function filterInput(data){
+    
+
+}
