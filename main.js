@@ -11,9 +11,9 @@ fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
 function render(users){
     const cards = users.map(el =>`
         <div>
-    <h1></h1>
-    <p></p>
-    <a href=""></a>
+    <h1>${el.avatar}</h1>
+    <p>${el.name}</p>
+    <a href="#">${el.}</a>
 </div>
-        `)
+        `).join()
 }
