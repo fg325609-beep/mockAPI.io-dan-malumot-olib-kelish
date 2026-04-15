@@ -5,6 +5,7 @@ fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
 .then(data =>{
     
     
+    
     render(data)
 })
 .catch(error=> console.error("xatolik yuz berdi",error));
@@ -13,7 +14,7 @@ function render(users){
         <div>
     <h1>${el.avatar}</h1>
     <p>${el.name}</p>
-    <a href="#">${el.}</a>
+    <a href="#">${el.createdAt}</a>
 </div>
         `).join()
 }
