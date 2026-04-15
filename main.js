@@ -25,6 +25,14 @@ render(users)
 
 
 function filterInput(data){
-    
+    search.addEventListener("search",(e) =>{
+        let input = e.target.value.toLowerCase();
+        let filterIndia = data.filter(input =>
+            search.name.tolowercase().includes(input);
+            search.createdAt.tolowercase().includes(input);
+
+        )
+        render(filterIndia)
+    });
 
 }
