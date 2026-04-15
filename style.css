@@ -14,3 +14,8 @@
 #search-box img{
     width: 100%;
 }
+span{
+    
+    display: flex;
+    flex-direction: column-reverse;
+}
