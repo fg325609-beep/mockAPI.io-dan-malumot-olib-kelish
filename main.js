@@ -1,4 +1,4 @@
-const wrapper = document.getElementById("container");
+const wrapper = document.getElementById("cards-wrapper"); 
 const search = document.getElementById("input");
 
 fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
@@ -10,9 +10,14 @@ fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
   .catch(error => console.error("Xatolik yuz berdi:", error));
 
 function render(users) {
+  if (users.length === 0) {
+    wrapper.innerHTML = "<h3>Hech narsa topilmadi</h3>";
+    return;
+  }
+
   const cards = users.map(el => `
     <div class="card" key="${el.id}">
-        <img src="${el.avatar}" alt="${el.name}"">
+        <img src="${el.avatar}" alt="${el.name}">
         <p>${el.name}</p>
         <a href="#">${new Date(el.createdAt).toLocaleDateString()}</a>
     </div>
