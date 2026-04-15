@@ -8,7 +8,6 @@
 #search-box{
     width: 100%;
     max-width: 1200px;
-    background: black;
     margin: 0 auto;
 }
 #search-box img{
@@ -21,4 +20,16 @@ span{
 }
 #input{
     padding: 20px ;
+}
+#cards-wrapper{
+     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#cards-wrapper img{
+    width: 200px;
+    height: 200px;
 }
