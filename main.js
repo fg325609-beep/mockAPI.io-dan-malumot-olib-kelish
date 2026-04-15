@@ -5,4 +5,8 @@ fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
 .then(data =>{
     render(data)
 })
-.catch(error=> console.error("xatolik yuz berdi"));
+.catch(error=> console.error("xatolik yuz berdi",error));
+function render(users){
+    const cards = users.map(el =>`
+        `)
+}
