@@ -5,7 +5,7 @@ fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
 .then(data =>{
     
     
-    console.log(data);
+   
     
     render(data)
 })
@@ -13,7 +13,7 @@ fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
 function render(users){
     const cards = users.map(el =>`
         <div key = "${el.id}">
-    <h1>${el.avatar}</h1>
+    <img src="${el.avatar}" alt="">
     <p>${el.name}</p>
     <a href="#">${el.createdAt}</a>
 </div>
