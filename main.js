@@ -17,4 +17,7 @@ function render(users){
     <a href="#">${el.createdAt}</a>
 </div>
         `).join()
+
+        wrapper.innerHTML = cards
 }
+render(users)
