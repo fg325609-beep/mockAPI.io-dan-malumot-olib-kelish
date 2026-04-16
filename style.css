@@ -28,6 +28,8 @@ span{
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 4fr;
     gap: 80px;
 }
 #cards-wrapper img{
