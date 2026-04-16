@@ -49,6 +49,7 @@ span{
 }
 p{
     font-size: 25px;
+    opacity: 0.5;
     &:hover{
         color: rgb(0, 195, 255);
     }
