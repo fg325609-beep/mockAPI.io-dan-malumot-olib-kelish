@@ -43,7 +43,7 @@ span{
     border-radius: 20px;
    
     &:hover{
-        background: rgb(82, 82, 88);
+        background: rgb(150, 150, 156);
         transform: scale(1.2);
     }
 }
