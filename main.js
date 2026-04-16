@@ -1,7 +1,7 @@
 const wrapper = document.getElementById("cards-wrapper"); 
 const search = document.getElementById("input");
 
-fetch("https://699d9b4283e60a406a46e1ba.mockapi.io/Teachers")
+fetch("https://69e05e1129c070e6597b67e3.mockapi.io/students")
   .then(response => response.json())
   .then(data => {
     render(data); 
