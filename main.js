@@ -1,12 +1,14 @@
 const wrapper = document.getElementById("cards-wrapper"); 
 const search = document.getElementById("input");
 
-fetch("https://69e05e1129c070e6597b67e3.mockapi.io/students")
+fetch("https://69e05e1129c070e6597b67e3.mockapi.io/teachers")
   .then(response => response.json())
   .then(data => {
+    console.log(data);
     render(data); 
     filterInput(data); 
   })
+  
   .catch(error => console.error("Xatolik yuz berdi:", error));
 
 function render(users) {
