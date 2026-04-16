@@ -55,6 +55,7 @@ p{
 }
 a{
     font-size: 25px;
+    color: black;
     &:hover{
         color: rgb(255, 0, 0);
     }
